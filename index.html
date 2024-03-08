@@ -4,59 +4,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyek1 STr HTML 27 02 2024</title>
+    <title>All About Luthfisw</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Srisakdi&display=swap" rel="stylesheet">
+    <style>
+        /* Gaya CSS khusus untuk slider galeri */
+        .galeri {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            overflow: hidden;
+            /* Agar gambar yang melebihi lebar slider terpotong */
+        }
+
+        .slides img {
+            width: 100%;
+            /* Gambar akan mengisi lebar slider */
+            height: auto;
+            /* Tinggi gambar disesuaikan agar proporsional */
+            max-width: 50%;
+            /* Gambar tidak akan melebihi lebar slider */
+            object-fit: cover;
+            /* Gambar akan diatur untuk mencakup area yang tersedia, tanpa mengubah rasio aspek */
+        }
+    </style>
 </head>
 
 <body>
     <header>
-
         <nav>
             <div class="logo">
                 <h4>All About Luthfisw</h4>
             </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profildiri.html">Profil & Video Diri</a></li>
-                <li><a href="Hobi.html">hobi</a></li>
-                <li><a href="galeri.html">galeri</a></li>
-                <li><a href="kemampuanTeknis.html">Kemampuan Teknis</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profil">Profil & Video Diri</a></li>
+                <li><a href="#hobi">Hobi</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kemampuan">Kemampuan Teknis</a></li>
             </ul>
             <div class="menu-toggle">
                 <input type="checkbox">
                 <span></span>
                 <span></span>
-                <span></span>   
+                <span></span>
             </div>
         </nav>
     </header>
-    <div class="container">
-    <main>
-        <div class="box flextwo">
-            <article>
-                <h2>Tentang Web</h2>
-                <p>Web Ini dibuat untuk memenuhi tugas Proyek 1. Beberapa sumber yang dipakai dalam pengerjaan tugas ini selain dari lms  adalah dari Repository Github Terima Kasih</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1534714509808!2d107.5711922104649!3d-6.8722073930978285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e420abc30acf%3A0x10569255865460a5!2sPoliteknik%20Negeri%20Bandung!5e0!3m2!1sen!2sid!4v1709044847065!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </article>
+
+    <section id="home">
+        <!-- Konten untuk halaman Home -->
+        <div class="container">
+            <main>
+                <div class="box">
+                    <article>
+                        <h2>Tentang Web</h2>
+                        <p>Web Ini dibuat untuk memenuhi tugas Proyek 1. Beberapa sumber yang dipakai dalam pengerjaan tugas ini selain dari lms adalah dari Repository Github Terima Kasih</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1534714509808!2d107.5711922104649!3d-6.8722073930978285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e420abc30acf%3A0x10569255865460a5!2sPoliteknik%20Negeri%20Bandung!5e0!3m2!1sen!2sid!4v1709044847065!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+                    <aside>
+                        <img src="img/luthfisw.jpg" alt="Luthfi Satrio Wicaksono" class="image">
+                        <h5>Luthfi Satrio Wicaksono</h5>
+                    </aside>
+                </div>
+            </main>
         </div>
-        
-        <aside class="box flexone">
-            <img src="img/luthfisw.jpg" class="image"/>
-            <h5>Luthfi Satrio Wicaksono</h5>
-        </aside>
-    </main>
-    
-    </div>
-</div>
+    </section>
+
+    <section id="profil">
+        <!-- Konten untuk halaman Profil -->
+        <div class="container">
+            <main>
+                <div class="box">
+                    <aside>
+                        <img src="img/luthfisw.jpg" alt="Luthfi Satrio Wicaksono" class="image">
+                        <h5>Luthfi Satrio Wicaksono</h5>
+                    </aside>
+                    <article>
+                        <h2>Tentang Saya</h2>
+                        <p>Saya adalah mahasiswa Polban Prodi Teknik Informatika. Saya lahir di Bandung, 12 Maret 2005. Saya Berdomisili di Daerah Buah Batu, Bandung.</p>
+                        <h2>Video Perkenalan HIMAKOM</h2>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/99sPinai_w8?si=IbKvYQubtU_NlR93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section id="hobi">
+        <!-- Konten untuk halaman Hobi -->
+        <div class="container">
+            <h3 class="judulhobi">Hobi Saya</h3>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/hobi1.jpg" alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>Bermain Game E-sports</h3>
+                        <p>hobi saya adalah bermain game, berkompetisi di game online adalah passion saya karena itu membuat diri saya tertantang.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/hobicoding.jpg" alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>mengoding</h3>
+                        <p>hobi saya adalah membuat aplikasi pada coding, ini saya suka karena saya sangat menyukai dunia teknologi.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/hobimusik.jpg " alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>mendengarkan musik</h3>
+                        <p>hobi saya adalah ini membuat saya tenang ketika mendengarkan musik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeri">
+        <h2>Galeri</h2>
+        <div class="slides">
+            <img src="img/hobi1.jpg" alt="Image 1">
+            <img src="img/hobicoding.jpg" alt="Image 2">
+            <img src="img/hobimusik.jpg" alt="Image 3">
+            <!-- Tambahkan lebih banyak gambar jika diperlukan -->
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <section id="kemampuan">
+        <!-- Konten untuk halaman Kemampuan Teknis -->
+        <div class="container">
+            <h3 class="judulhobi">Kemampuan Teknis</h3>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/Clang.png" alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>Bahasa C</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/java.jpg" alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>Bahasa Java</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/Laravel.png " alt="Foto Hobi">
+                    <div class="card-content">
+                        <h3>Framework Laravel</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span id="current-date"></span>
+        <div class="social-links">
+            <a href="https://www.instagram.com/luthfisw_" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/LuffySW" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+            <a href="https://twitter.com/luthfisw_" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
-<footer class="footer">
-    <span id="current-date"></span>
-    <div class="social-links">
-        <a href="https://www.instagram.com/luthfisw_" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
-        <a href="https://github.com/LuffySW" target="_blank"><img src="img/github.png" alt="GitHub"></a>
-        <a href="https://twitter.com/luthfisw_" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
-    </div>
-</footer>
-<script src="js/main.js"></script>
+
 </html>

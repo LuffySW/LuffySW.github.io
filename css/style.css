@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,149 +12,136 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar */
 nav {
   display: flex;
-  background-color: coral;
-  justify-content: space-around;
-  height: 45px;
-  align-items: center;
-  color: whitesmoke;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  width: 40%;
+  background-color: #4caf50;
   justify-content: space-between;
-  transition: all 0.4s;
+  align-items: center;
+  color: #fff;
+  padding: 0 20px;
 }
 
 nav .logo {
   font-family: "Srisakdi", cursive;
   letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: teal;
+  color: #cddc39;
 }
 
-/* Hamburger menu */
 .menu-toggle {
   display: none; 
-  flex-direction: column;
-  height: 17px;
-  justify-content: space-between;
-  position: relative;
 }
 
 .menu-toggle input {
-  position: absolute;
-  top: -5px;
-  left: -3px;
-  width: 21px;
-  height: 21px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
+  display: none;
 }
 
 .menu-toggle span {
   display: block;
-  width: 21px;
-  height: 2px;
-  background-color: whitesmoke;
-  border-radius: 3px;
-  transition: all 0.7s;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
 }
 
-.menu-toggle span:nth-child(2),
-.menu-toggle span:nth-child(4) {
-  transform-origin: left center;
+.menu-toggle span:last-child {
+  margin-bottom: 0;
 }
 
-.menu-toggle input:checked ~ span:nth-child(2) {
-  transform: rotate(45deg);
-}
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+      display: flex;
+      cursor: pointer;
+  }
 
-.menu-toggle input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg);
-}
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #4caf50;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+  }
 
-.menu-toggle input:checked ~ span:nth-child(3) {
-  width: 0%;
-  opacity: 0;
-  transition: .1s;
-}
+  nav ul.active {
+      display: flex;
+  }
 
-.image {
-  width: 100%;
-  height: auto;  
-  max-width: 140px;
-  display: block;
-  margin: 0 auto; /* Center horizontally */
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle span:nth-child(2) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
-  padding: 8px;
+  border: 2px solid #4caf50;
   border-radius: 5px;
-  margin: 0 auto;
-  flex: 1;
-}
-.card-container {
-  display: flex; /* Mengatur kontainer utama sebagai flexbox */
-  flex-direction: row; /* Mengatur tata letak menjadi horizontal */
-  justify-content: center; /* Pusatkan kartu-kartu di dalam kontainer */
-  align-items: flex-start; /* Atur kartu-kartu ke atas */
-  flex-wrap: wrap; /* Memungkinkan pemisahan baris jika kontainer tidak cukup lebar */
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
+  padding: 20px;
+  margin: 20px auto;
 }
 
 .box {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Ensure proper spacing between boxes */
-.flexone {
-  flex-grow: 1;
-}
-
-.flextwo {
-  flex-grow: 2;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column; /* Update: agar konten pada box menjadi vertikal di tengah */
+  text-align: center; /* Update: agar konten pada box menjadi vertikal di tengah */
 }
 
-/* Ensure the video doesn't overflow its container */
-.box.flextwo iframe {
-  max-width: 100%;
+.box article {
+  flex: 1;
+}
+
+.box aside {
+  order: 1;
+}
+
+.box img {
+  width: 140px;
+  height: auto;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-}
-
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  text-align: center;
+  background-color: #4caf50;
+  color: #fff;
 }
 
 .social-links {
@@ -175,92 +163,71 @@ footer {
   transform: scale(1.2);
 }
 
-h2 {
+h2, h5 {
   text-align: center;
-  color: brown;
-  text-justify: inter-word;
-  word-wrap: break-word;
-}
-
-h5 {
-  text-align: center;
-  color: red;
-  word-wrap: break-word;
+  color: #4caf50;
 }
 
 p {
   text-align: justify;
-  text-justify: inter-word;
 }
 
+.video-container {
+  text-align: center;
+  margin-top: 20px; /* Sesuaikan dengan kebutuhan */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Add gap between cards */
+}
+
+.card {
+  width: calc(50% - 20px);
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card-content p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.judulhobi {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Media queries */
 @media screen and (max-width: 768px) {
-  nav ul {
-    width: 50%;
+  .card {
+      width: calc(50% - 20px);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  main {
-    flex-direction: column-reverse;
-  }
-
-  nav ul {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: coral;
-    transition: all 0.72s;
-    opacity: 0;
-    z-index: 2;
-  }
-
-  nav ul.menushow {
-    opacity: 0.5;
-  }
-
   .card {
-    width: 80%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add margin bottom to create space between cards */
-    text-align: center;
+      width: calc(100% - 20px);
   }
-
-  /* Adjusted max-width for smaller screens */
-  .card img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .card-content {
-    padding: 20px;
-  }
-
-  .card-content h3 {
-    margin-top: 0;
-    font-size: 20px;
-  }
-
-  .card-content p {
-    margin-bottom: 0;
-    font-size: 16px;
-  }
-  .judulhobi{
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-
 }
