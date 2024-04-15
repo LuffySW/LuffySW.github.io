@@ -12,6 +12,40 @@ body {
   min-height: 100vh;
 }
 
+/* Styling tabel */
+table {
+  width: 100%; /* Sesuaikan lebar tabel */
+  border-collapse: collapse; /* Menggabungkan border sel */
+  margin: 20px 0; /* Menambahkan margin di sekitar tabel */
+}
+
+th, td {
+  padding: 10px; /* Menambahkan padding pada sel */
+  border: 1px solid #ccc; /* Memberikan border pada sel */
+  text-align: center; /* Menyelaraskan teks di tengah */
+  color: #333; /* Mengatur warna teks */
+}
+
+th {
+  background-color: #4caf50; /* Mengatur warna latar belakang header tabel */
+  color: #fff; /* Mengatur warna teks header tabel */
+  font-weight: bold; /* Membuat teks header tebal */
+}
+
+td {
+  background-color: #f9f9f9; /* Mengatur warna latar belakang sel */
+}
+
+tr:hover {
+  background-color: #e0f7fa; /* Mengubah warna latar belakang saat hover */
+}
+
+/* Menambahkan shadow pada tabel */
+table {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 nav {
   display: flex;
   background-color: #4caf50;
@@ -52,7 +86,7 @@ nav ul li a:hover {
 }
 
 .menu-toggle {
-  display: none; 
+  display: none;
 }
 
 .menu-toggle input {
